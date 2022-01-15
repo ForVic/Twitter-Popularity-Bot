@@ -46,4 +46,9 @@ if __name__ == "__main__":
     second_score = generate_score(second_thing)
 
     if first_score > second_score:
-        print (f"{first_thing} is more popular than {second_thing}")
+        print (f"{first_thing} is more popular than {second_thing} by a margin of {((first_score - second_score) / first_score) * 100}%.")
+    elif second_score > first_score:
+        print (f"{second_thing} is more popular than {first_thing} by a margin of {((second_score - first_score) / second_score) * 100}%")
+    else:
+        print(f"{first_thing} is exactly as popular as {second_thing}")
+    
